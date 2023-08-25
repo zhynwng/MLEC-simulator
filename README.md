@@ -9,4 +9,25 @@ This repo also contains steps to reproduce multiple evaluation figures from the 
 
 ## Step 0: Reserve node
 
-To properly run the simualtor, it's best to use a node with many CPU cores. Our code uses multiple threads to run the simulator in parallel, and a node with a lot of CPU cores would make simulation much faster. For example, you may reserve a node from [Chameleon](https://chameleoncloud.readthedocs.io/en/latest/technical/reservations.html)
+To properly run the simualtor, it's best to use a node with many CPU cores. Our code uses multiple threads to run the simulator in parallel, and a node with a lot of CPU cores would make simulation much faster.
+
+For example, you may reserve a node from [Chameleon](https://chameleoncloud.readthedocs.io/en/latest/technical/reservations.html). The zen3 compute node has 256 cores, which is suitable for the job. Then, launch the reserved node with the image "CC-Ubuntu20.04", and don't forget to assign a floating IP to it, so you can ssh into it. 
+
+## Step 1: Setup node 
+
+Before running the experiments, we need to download the packages listed in `setup.sh`. First, we clone this repo into your server. 
+
+#### Note: all commands below should be run on your reserved Chameleon node connected through ssh, not your local laptop.
+
+```
+rm -rf sc23-mlec
+git clone https://github.com/zhynwng/MLEC-simulator
+```
+
+Then, we set up and install the simulator
+```
+cd MLEC-simulator/scripts && bash setup-node.sh
+```
+
+This will take around 10 minutes to complete.
+
