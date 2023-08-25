@@ -9,4 +9,4 @@ This repo also contains steps to reproduce multiple evaluation figures from the 
 
 ## Step 0: Reserve node
 
-To properly run the simualtor, it's best to use a node with many CPU cores. Our code uses multiple threads to run the simulator in parallel, and a node with a lot of CPU cores would make simulation much faster. For example, you many reserve a node from [Chameleon](https://chameleoncloud.readthedocs.io/en/latest/technical/reservations.html)
+To properly run the simualtor, it's best to use a node with many CPU cores. Our code uses multiple threads to run the simulator in parallel, and a node with a lot of CPU cores would make simulation much faster. For example, you may reserve a node from [Chameleon](https://chameleoncloud.readthedocs.io/en/latest/technical/reservations.html)
