@@ -5,14 +5,15 @@ In this instruction, we compute the burst tolerance for different MLEC schemes t
 
 ```
 source ~/.bashrc 
-cd /scripts/fig5
+cd ~/MLEC-simulator-doc/scripts/fig5
 bash exp.sh
 ```
+
 ## Fetch Results
 Then we fetch the results from the MLEC simulator to ~/MLEC-simulator-doc/data/fig5
 
 ```
-mkdir ~/MLEC-simulator-doc/data/fig5
+mkdir -p ~/MLEC-simulator-doc/data/fig5
 cp ~/mlec-sim/src/theory/s-burst-theory-MLEC_C_C.log ~/MLEC-simulator-doc/data/fig5/
 cp ~/mlec-sim/src/theory/s-burst-theory-MLEC_C_D.log ~/MLEC-simulator-doc/data/fig5/
 cp ~/mlec-sim/src/theory/s-burst-theory-MLEC_D_C.log ~/MLEC-simulator-doc/data/fig5/
