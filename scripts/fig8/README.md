@@ -29,4 +29,4 @@ cd ~/MLEC-simulator-doc/
 python3 scripts/fig8/plot.py plots/fig8/fig8.png
 ```
 
-You can then check the plots in the directory "~/MLEC-simulator-doc/plots/fig5"
+You can then check the plots in the directory "~/MLEC-simulator-doc/plots/fig8"
