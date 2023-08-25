@@ -20,29 +20,24 @@ Before running the experiments, we need to download the packages listed in `setu
 #### Note: all commands below should be run on your reserved Chameleon node connected through ssh, not your local laptop.
 
 ```
-rm -rf sc23-mlec
-git clone https://github.com/zhynwng/MLEC-simulator
+cd
+rm -rf MLEC-simulator-doc
+git clone https://github.com/zhynwng/MLEC-simulator-doc.git
 ```
 
 Then, we set up and install the simulator
 ```
-cd MLEC-simulator/scripts && bash setup-node.sh
+cd MLEC-simulator-doc/scripts && bash setup-node.sh
 ```
 
-This will take around 10 minutes to complete.
+This will take around 10 minutes to complete. Lastly, create folders to contain the output data and figure
+
+```
+cd ~/MLEC-simulator-doc
+mkdir data
+mkdir plots
+```
 
 ## Run the Simulator
 
-Now, you can head to each of the figure files to run the simulator:
-
-    - Fig5.ipynb computes burst tolerance for different MLEC schemes and repair methods using dynamic programming. It then reproduces Figure 5 based on experiment results. It should take 10 minutes to run.
-    
-    - Fig8.ipynb runs simulation in "normal" mode and evaluates the repair network traffic for different MLEC schemes and repair methods. It then plots Figure 8 based on experiment results. It should take 5-10 minutes to run.
-    
-    - Fig10.ipynb runs simulation in "splitting" mode to simulate the high durability for different MLEC schemes and repair methods. It then plots Figure 10 based on experiment results. It takes 3-4 hours to finish. Since it takes long time, we run the experiments in the background using "tmux". We also provide a script to help monitor if the experiments have finished or not.
-    
-    - Fig11.ipynb measures the encoding throughput for different SLEC configurations and then plot a heatmap (Figure 11) for it. It takes 2-3 hours to finish and we also run it in the background.
-    
-    - Fig12a.ipynb evaluates the durability and throughput for different EC schemes. The durability evaluation is done using "splitting" method, which is complicated to configure and time-consuming to run. Therefore, we provide well-prepared scripts to run the experiments, and reproduce 10 data points from Figure 12a. These data points should be representative enough to show the patterns and findings mentioned in the paper. It takes 3-5 hours to finish and we also run it in the background.
-
-In summary, the entire artifact takes 8-12 hours to run. But many of then are configured to run in the background using "tmux", which we hope can help save reviewers' time
+Now, you can go to script folder, which contains the intructions to reproduce multiple evaluation figures. We also included the sample output data and figure we have in /sample_output folder, which you may compare with your own results.
